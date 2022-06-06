@@ -1,0 +1,90 @@
+@import 'grid';
+//login
+.login{
+	background-color: $beige;
+	color: $brown;
+	text-align: center;
+    img{
+        margin-top: 50px;
+    }
+    h3{
+        font-family: $ns-medium;
+        font-size: $font-xl;
+        margin-top: 5px;
+        padding-bottom: 35px;
+        
+    }
+}
+.form-login{
+	width: 300px;
+	margin: 0 auto;
+	text-align: left;
+	position: relative;
+	border-top: 2px $orange solid;
+	padding:0 0 16px 15px;
+	/*陰影*/
+	box-shadow: $box-shadow;
+    .login-text{
+        font-family: $ns-black;
+        font-size: $font-l;
+        position: absolute;
+        top: 15px;
+        left: 121px;
+        right: 121px;
+    }
+    .lblEmail, .lblPassword{
+        font-family: $mc-JhengHei;
+        font-size: $font-m;
+        color: $brown;
+    }
+    .lblEmail{
+        margin-top: 45px;
+    }
+    .lblPassword{
+        margin-top: 15px;
+    }
+    i{
+        position: absolute;
+        color: rgba(61,17,0,0.50);
+        padding: 7px 0 5px 10px;
+        font-size: 15px;
+    }
+    input{
+        width: 270px;
+        height: 32px;
+        background: $white;
+        border: 1px solid $gray;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        border-radius: 3px;
+    }
+    .lblForget{
+        font-family: $mc-JhengHei;
+        font-size: $font-s;
+        color: $orange;
+    }
+    button{
+        width: 125px;
+        height: 32px;
+        font-family: $PingFang;
+        font-size: $font-s;
+        color: $white;
+        border-radius: 3px;
+        margin-top: 20px;
+    }
+    
+}
+.login .pure-form-stacked .form-login-text2{
+    margin: 0;
+}
+.pure-button-primary{
+    background: rgba(0,0,0,0.35);
+}
+.pure-button-selected{
+	background: $light-orange;
+	margin-left: 16px; 
+}
+@include iphone-XR{
+	.login img{
+		height: 36px;
+	}
+}

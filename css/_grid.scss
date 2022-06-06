@@ -1,0 +1,22 @@
+@mixin pad{
+    @media(max-width:768px){
+        @content
+    }
+}
+@mixin iphone-XR {
+    @media(max-width:414px){
+        @content
+    }
+}
+
+@mixin iphone-12pro {
+    @media(max-width:390px){
+        @content
+    }
+}
+
+@mixin iphone-SE {
+    @media(max-width:375px){
+        @content
+    }
+}

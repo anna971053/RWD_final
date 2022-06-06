@@ -1,0 +1,223 @@
+@import 'mixin';
+/*header*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background: $black;
+    color: $white;
+    h1{
+        padding-top: 16px;
+        a{
+            @include text-hidden;
+            width: 120px;
+            height: 30px;
+            background-image: url(../assets/logo_w@svg.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 42px;
+        }
+    }
+}
+@media(max-width:767px){
+	.header h1 a{
+		margin-left: 22px;
+		height: 24px;
+	}
+}
+@media(max-width:414px){
+	.header h1 a{
+		height: 20px;
+	}
+}
+/*menu*/
+.menu{
+	display: flex;
+  	justify-content: flex-end;
+    li{
+        a{
+            display: block;
+            text-align: center;
+            padding: 1em;
+            color: $white;
+        }
+    }
+}
+
+.showmenu {
+	display: none;
+}
+@media (max-width:767px){
+    .header{
+		border-bottom:1px $white solid;
+	}
+    .menu{
+        flex-direction: column;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1s;
+        margin-top: 1px;
+        position: absolute;
+        z-index: 100;
+        top: 54px;
+        left: 0;
+        right: 0;
+        background: $black;
+        li{
+            border-bottom:1px $white dashed;
+            a{
+                transition: all 0.3s;
+            }
+            a:hover{
+                background: $white;
+                color: $black;
+                cursor: pointer;
+            }
+        }
+    }
+    .showmenu{
+		display: block;
+		float: right;
+		margin: 1em;
+		color: $white;
+	}
+	.menu-show .menu{
+		max-height: 350px;
+	}
+}
+/*banner*/
+.banner{
+	position: relative;
+	height: 400px;
+	background-image: url(../assets/header_desktop.png);
+}
+.banner-text{
+    padding:0px 38px 30px;	
+	height: auto;
+	text-align: center;
+	background: rgba(0,0,0,0.35);
+	color: $white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    h2{
+        font-size: $font-l * 2 ;
+        padding:20px 0;
+    }
+    h3{
+        display: none;
+    }
+    p{
+        font-size: $font-m;
+        line-height: 1.5;
+    }
+    i{
+        padding: 0 4px;
+    }
+}
+@media(max-width:767px){
+	.banner{
+		background-position: 70% 0%;
+	}
+}
+@media(max-width:414px){
+    .banner{
+		/* 水平置中*/
+		background-position:center center;
+		background-image: url(../assets/header_mobile.png);
+		height: 360px;
+	}
+    .banner-text{
+        width: 300px;
+        h2{
+            display: none;
+        }
+        h3{
+            display: block;
+            font-size: $font-l * 2;
+            line-height: 1.5;
+            margin-top: 20px;
+            margin-bottom: 16px;
+        }
+    }
+} 
+
+/*footer*/
+.footer{
+    background-color: $beige;
+    color: $brown;
+    padding: 0 20px;
+    .about , .contact{
+        float:left;
+        width: 300px;
+        margin-right: 2%;
+        margin-bottom: 50px;
+    }
+    .about p{
+        font-size: 16px;
+    }
+    li h4{
+        font-size: $font-m * 1.5;
+        margin-top: 50px;
+        padding-bottom: 16px;
+    }
+    .contact li{
+        list-style: disc;
+        margin-left: 20px;
+        padding: 2px 0;
+        font-size: 16px;
+        a{
+            color:$brown;
+        }
+    }
+    .sns{
+        float: right;
+        margin-top: 50px;
+        ul{
+            float:right;
+            margin-top: 20px;
+        }
+        li{
+            float:left;
+        }
+        a{
+            font-size: $font-l * 2;
+            margin-left: 12px;
+        }
+        .google{
+            color: $dark-red;
+        }
+        .twitter{
+            color: $light-blue;
+        }
+        .facebook{
+            color: $blue;
+        }
+    }
+}
+@media(max-width:767px){
+    .footer{
+        width: 100%;
+        .about , .contact , .sns{
+            width: 30%;
+        }
+    }
+}
+@media(max-width:414px){
+    .footer{
+        .about , .contact , .sns{
+            width: 90%;
+        }
+        .sns{   
+            float: left;
+            margin: 10px 0 20px 0;
+        }
+        .about , .contact{
+            margin-bottom: 30px;
+        }
+        .contact h4{
+        margin-top: 20px;
+    }
+    }
+}

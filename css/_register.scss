@@ -1,0 +1,106 @@
+@import 'grid';
+//register
+.form-register{
+	width: 620px;
+	padding:0 0 11px 15px;
+	margin: 0 auto;
+	text-align: left;
+	margin: 0 auto;
+	position: relative;
+	border-top: 2px $orange solid;
+	/*陰影*/
+	box-shadow: $box-shadow;
+    .register-text{
+        font-family: $ns-black;
+        font-size: $font-l;
+        position: absolute;
+        top: 15px;
+        left: 265px;
+        right: 264px;
+    }
+    .left{
+        margin-top: 45px;
+        float:left;
+    }
+    .right{
+        margin-top: 45px;
+        margin-left: 15px;
+        float:left;
+    }
+    p{
+        width: 285px;
+        height: 138px;
+        font-family: $mc-JhengHei;
+        font-size: 15px;
+        color: $brown;
+        line-height: 1.2;
+        margin-top: 5px;
+    }
+    .lblEmail,.lblPassword{
+        font-family: $mc-JhengHei;
+        font-size: $font-m;
+        color: $brown;
+    }
+    .lblPassword{
+        margin-top: 15px;
+    }
+    i{
+        position: absolute;
+        color: rgba(61,17,0,0.50);
+        padding: 8px 0 5px 10px;
+        font-size: 15px;
+    }
+    .right{
+        .lock2{
+            margin-top: 12px;
+        }
+        .stacked-password2{
+            margin:12px 0px  0px 0px;
+        }
+    }
+    input{
+        width: 285px;
+        height: 32px;
+        background: $white;
+        border: 1px solid $gray;
+        box-shadow: inset 0px 1px 0px 0px #ECECEC;
+        border-radius: 3px;
+    }
+    .lblAccount{
+        font-family: $mc-JhengHei;
+        font-size: $font-s;
+        color: $orange;
+    }
+    button{
+        padding:0 48.5px;
+        height: 32px;
+        font-family: $PingFang;
+        font-size: 14px;
+        color: $white;
+        border-radius: 3px;
+        margin-top: 20px;
+        background: $orange;
+        float:right;
+    }
+}
+@include iphone-XR{
+	.form-register{
+		width:  300px;
+		height: 500px;
+        .register-text{
+            left:  121px;
+            right: 121px;
+        }
+        .right{
+            margin-top: 15px;
+            margin-left: 0px;
+        }
+        input{
+            width: 270px;
+        }
+        p{
+            width: 270px;
+            height: 150px;
+        }
+	}
+}

@@ -1,0 +1,257 @@
+@import 'grid';
+/*cart*/
+.cart{
+	background-color: $beige;
+	color:$brown;
+	font-family: $mc-JhengHei;
+	display: flex;
+}
+.sidebar{
+	width: 20%;
+	margin-left: 42px;
+	padding-top: 52px;
+    i{
+        font-size: 32px;
+    }
+
+    h2{
+        display: inline-block;
+        font-size: 20px;
+        color: $brown;
+        line-height: 32px;
+        margin-bottom: 16px;
+        margin-left: 15px;
+    }
+
+    li{
+        font-size: $font-m;
+        padding:8px 0px 8px 5px;
+        border-bottom: 1px solid $brown;
+        margin:5px 0;
+    }
+
+    li:hover{
+        background: $brown;
+        color:$white;
+        cursor: pointer;
+    }
+}
+.search{
+	margin-top: 48px;
+	margin-left: 23px;
+
+    input{
+        width: 424px;
+        height: 32px;
+        border: 2px solid $brown;	
+    }
+
+    .fa-search{
+        position: absolute;
+        padding: 7px 10px 7px 10px;
+        background-color: $brown;
+        color:$white;
+    }
+
+    .fa-search:hover{
+        background-color: $beige;
+        color:$brown;
+        cursor: pointer; 
+    }
+
+    .cart-right{
+        float: right;
+        font-size: $font-m;
+        font-family: $mc-JhengHei;
+
+        span{
+            margin-left: 10px;
+            border-right:2px solid $brown;
+        }
+
+        i{
+            font-size: $font-xl;
+            margin-left: 10px;
+        }
+    }
+    ul{
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 700px;
+    }
+
+    li{
+        width: 30%;
+        padding-bottom:34px;
+        font-family: $mc-JhengHei;
+        box-shadow: $box-shadow;
+        position: relative;
+        margin:0px 20px 30px 0;
+        .fa-heart{
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            color:$white;
+            font-size: $font-xl;
+        }
+        h3{
+            padding-bottom: 5px;
+            font-size: $font-xl;
+            margin: 20px 0 0 45px;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size: 12px;
+            margin-left: 20px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+        }
+        hr{
+            width: 91px;
+            border: 1px solid $brown;
+            margin-bottom: 20px;
+        }
+        span{
+            font-style: italic;
+            font-weight: bold;
+            font-size: $font-xl;
+            margin-left: 80px;
+        }
+        button{
+            width: 200px;
+            padding: 4px 0;
+            margin: 16px 0 0 5px;
+            border: 2px solid $orange;
+            border-radius: 3px;
+            color: $orange;
+            font-size: $font-m;
+            letter-spacing: 1px;
+        }
+        button:hover{
+            background:$orange;
+            color: $white;
+            cursor: pointer;
+        }
+        .fa-cart-shopping{
+            font-size: 13px;
+            height: 14px;
+            padding-right: 9px;
+        }
+    }
+
+    .ribbon{
+        position: absolute;
+        top:0px;
+        right: 0px;
+        z-index: 1;
+        span{
+            background: $green;
+            font-family: $ns-bold;
+            font-size: $font-s;
+            color: $white;
+            text-align: center;
+            padding: 2px;  
+        }
+    }
+
+    
+    .fourletter{
+        h3{
+            margin-left: 65px;
+        }
+        p{
+            margin-left: 45px;
+        }
+        span{
+            margin-left: 70px;
+        }
+        .brothermoney{
+            margin-left: 75px;
+        }
+        .dragonmoney{
+            margin-left: 55px;
+        }
+    }
+}
+@include pad{
+    .cart{
+		flex-direction: column;
+		max-width: 100%;
+	}
+	.search .cart-right{
+		padding-right: 73px;
+	}
+    .sidebar{
+		margin-left: 20px;
+		width: 25%;
+        i{
+            font-size: $font-xl;
+        }
+        h2{
+            margin-left: 0px;
+        }
+	}
+}
+@include iphone-XR{
+    .sidebar{
+		width: 80%;
+	}
+    .search{
+        input{
+            width: 300px;
+        }
+        .cart-right{
+            padding-right: 50px;
+            margin-top: 20px;
+            margin-bottom: 33px;
+        }
+        ul{
+            margin-top: 73px;
+        }
+        li{
+            width: 90%;
+            height: 300px;
+            h3{ 
+                margin-top: 11px;
+                margin-left: 110px;			
+            }
+            p{
+                margin-left: 90px;
+            }
+            hr{	
+                margin-left: 130px;
+            }
+            span{
+                margin-left: 150px
+            }
+            button{
+                width: 280px;
+                margin-top: 16px;
+                margin-left: 35px;
+            }
+        }
+        .fourletter{
+            h3{
+                margin-left: 130px;
+            }
+            p{
+                margin-left: 112px;;
+            }
+            hr{
+                margin-left: 127px;
+            }
+            span ,.brothermoney{
+                margin-left: 143px;
+            }
+            .dragonmoney{
+                margin-left: 123px;
+            }
+        }
+    }
+}
+@include iphone-SE{
+	.search li{
+		width: 98%;
+	}
+}
