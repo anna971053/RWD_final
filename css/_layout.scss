@@ -1,4 +1,4 @@
-@import 'mixin';
+@import 'variables';
 /*header*/
 .header{
     display: flex;
@@ -19,13 +19,13 @@
         }
     }
 }
-@media(max-width:767px){
+@include pad{
 	.header h1 a{
 		margin-left: 22px;
 		height: 24px;
 	}
 }
-@media(max-width:414px){
+@include iphone-XR{
 	.header h1 a{
 		height: 20px;
 	}
@@ -47,7 +47,7 @@
 .showmenu {
 	display: none;
 }
-@media (max-width:767px){
+@include pad{
     .header{
 		border-bottom:1px $white solid;
 	}
@@ -116,12 +116,12 @@
         padding: 0 4px;
     }
 }
-@media(max-width:767px){
+@include pad{
 	.banner{
 		background-position: 70% 0%;
 	}
 }
-@media(max-width:414px){
+@include iphone-XR{
     .banner{
 		/* 水平置中*/
 		background-position:center center;
@@ -196,7 +196,7 @@
         }
     }
 }
-@media(max-width:767px){
+@include pad{
     .footer{
         width: 100%;
         .about , .contact , .sns{
@@ -204,7 +204,7 @@
         }
     }
 }
-@media(max-width:414px){
+@include iphone-XR{
     .footer{
         .about , .contact , .sns{
             width: 90%;

@@ -1,9 +1,10 @@
 @import 'mixin';//全域變數+mixin
 @import 'reset';//reset
-@import 'layout';//header+footer
 @import 'grid';//斷點
+@import 'layout';//header+footer
+@import 'variables';//變數
 //pages
-@import 'index';
-@import 'login';
-@import 'register';
-@import 'cart';
+@import 'pages/index';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/cart';

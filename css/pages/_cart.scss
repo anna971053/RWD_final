@@ -1,4 +1,3 @@
-@import 'grid';
 /*cart*/
 .cart{
 	background-color: $beige;
@@ -94,6 +93,10 @@
             left: 9px;
             color:$white;
             font-size: $font-xl;
+        }
+        .fa-heart:hover{
+            transform: scale(1.2);//放大的倍率
+            transition:0.1s //放大所需的時間和特效
         }
         h3{
             padding-bottom: 5px;

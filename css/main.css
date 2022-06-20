@@ -70,18 +70,6 @@ img {
 }
 
 /* CSS Reset end */
-/*清除浮動*/
-.clearfix {
-  clear: both;
-}
-
-/*圖片取代文字技巧*/
-.wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 /*header*/
 .header {
   display: -webkit-box;
@@ -115,7 +103,7 @@ img {
   margin-left: 42px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header h1 a {
     margin-left: 22px;
     height: 24px;
@@ -149,7 +137,7 @@ img {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header {
     border-bottom: 1px #FFFFFF solid;
   }
@@ -231,7 +219,7 @@ img {
   padding: 0 4px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .banner {
     background-position: 70% 0%;
   }
@@ -325,7 +313,7 @@ img {
   color: #3A5795;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer {
     width: 100%;
   }
@@ -971,6 +959,13 @@ img {
   left: 9px;
   color: #FFFFFF;
   font-size: 20px;
+}
+
+.search li .fa-heart:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .search li h3 {
